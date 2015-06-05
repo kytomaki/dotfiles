@@ -3,7 +3,7 @@ DOTFILES_ROOT=$(cd $(dirname $0)/..; pwd)
 
 echo $DOTFILES_ROOT
 
-for FILE in "$(find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink)"
+for FILE in $(find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink)
 do
 	TARGET="$HOME/.$(basename ${FILE%.*})"
 	if [ ! -L $TARGET ]; then
