@@ -6,5 +6,7 @@ echo $DOTFILES_ROOT
 for FILE in "$(find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink)"
 do
 	TARGET="$HOME/.$(basename ${FILE%.*})"
-	ln -s $FILE $TARGET
+	if [ ! -L $TARGET ]; then
+		ln -s $FILE $TARGET
+	fi
 done
