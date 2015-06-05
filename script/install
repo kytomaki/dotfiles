@@ -1,0 +1,10 @@
+#!/bin/sh
+DOTFILES_ROOT=$(readlink -f $(dirname $0)/..)
+
+echo $DOTFILES_ROOT
+
+for FILE in "$(find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink)"
+do
+	TARGET="$HOME/.$(basename ${FILE%.*})"
+	ln -s $FILE $TARGET
+done
