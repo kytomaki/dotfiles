@@ -1,0 +1,22 @@
+execute pathogen#infect()
+set hidden
+set history
+set title
+set nobackup
+set noswapfile
+set modeline
+set number
+set laststatus=2
+syntax on
+set background=dark
+colorscheme solarized
+filetype indent on
+autocmd BufNewFile,BufRead Puppetfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd FileType ruby,puppet,yaml,javascript,jade,json setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+let mapleader=","
+let g:CommandTCancelMap=['<ESC>','<C-c>']
+let g:CommandTSelectPrevMap=['<C-p>', '<C-k>', '<Esc>OA', '<Up>']
+let g:CommandTSelectNextMap=['<C-n>', '<C-j>', '<Esc>OB', '<Down>']
+let g:airline_powerline_fonts = 1
+command JsonFormat execute ":%!JSON_TMP=$(mktemp); tee $JSON_TMP |jsonlint && (cat $JSON_TMP |python -m json.tool) || cat $JSON_TMP && rm $JSON_TMP"
