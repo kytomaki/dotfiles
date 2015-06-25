@@ -13,6 +13,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Source boxen.
-if [[ -s "/opt/boxen/env.sh" ]]; then
+if [[ -s "/opt/boxen/env.sh" && -z "${BOXEN_HOME+x}" ]]; then
   source "/opt/boxen/env.sh"
 fi
