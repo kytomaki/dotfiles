@@ -9,6 +9,8 @@ set number
 set laststatus=2
 syntax on
 let g:solarized_termcolors=256
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 set background=dark
 colorscheme solarized
 filetype indent on
