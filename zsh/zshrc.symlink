@@ -16,3 +16,6 @@ fi
 if [[ -s "/opt/boxen/env.sh" && -z "${BOXEN_HOME+x}" ]]; then
   source "/opt/boxen/env.sh"
 fi
+
+# Run ztodo on entering directory
+chpwd() { ztodo }
