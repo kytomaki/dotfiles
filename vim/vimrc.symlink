@@ -13,7 +13,7 @@ let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 set background=dark
 colorscheme solarized
-filetype indent on
+filetype plugin indent on
 autocmd BufNewFile,BufRead Puppetfile set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd FileType ruby,puppet,yaml,javascript,jade,json setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
