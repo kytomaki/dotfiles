@@ -3,7 +3,13 @@ export TERM=xterm-256color
 export GOPATH=$HOME/src/go
 export GOBIN=$GOPATH/bin
 
-export PATH=$GOBIN:$HOME/local/bin:$HOME/.local/bin:$PATH
+path=(
+  $GOBIN
+  $HOME/bin
+  $HOME/local/bin
+  $HOME/.local/bin
+  $PATH
+)
 
 # Local configs
 if [[ -s "${HOME}/.local/zshrc" ]]; then
