@@ -18,6 +18,7 @@ autocmd BufNewFile,BufRead Puppetfile set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd FileType ruby,puppet,yaml,javascript,jade,json setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 let g:syntastic_ruby_checkers = ['rubocop']
+autocmd Filetype gitcommit setlocal spell textwidth=72
 let mapleader=","
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 let g:CommandTSelectPrevMap=['<C-p>', '<C-k>', '<Esc>OA', '<Up>']
