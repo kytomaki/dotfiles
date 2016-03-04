@@ -1,10 +1,9 @@
 export TERM=xterm-256color
 
 export GOPATH=$HOME/src/go
-export GOBIN=$GOPATH/bin
 
 path=(
-  $GOBIN
+  $GOPATH/bin
   $HOME/bin
   $HOME/local/bin
   $HOME/.local/bin
