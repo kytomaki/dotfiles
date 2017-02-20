@@ -19,9 +19,10 @@ if [[ -s "/opt/boxen/env.sh" && -z "${BOXEN_HOME+x}" ]]; then
   source "/opt/boxen/env.sh"
 fi
 
+export CASKROOM=/opt/homebrew-cask/Caskroom
 # Source chtf
-if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
-  source "/usr/local/share/chtf/chtf.sh"
+if [[ -f ${HOMEBREW_ROOT}/share/chtf/chtf.sh ]]; then
+  source "${HOMEBREW_ROOT}/share/chtf/chtf.sh"
 fi
 
 # source chruby
