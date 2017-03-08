@@ -14,20 +14,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Source boxen.
-if [[ -s "/opt/boxen/env.sh" && -z "${BOXEN_HOME+x}" ]]; then
-  source "/opt/boxen/env.sh"
-fi
-
-export CASKROOM=/opt/homebrew-cask/Caskroom
 # Source chtf
 if [[ -f ${HOMEBREW_ROOT}/share/chtf/chtf.sh ]]; then
   source "${HOMEBREW_ROOT}/share/chtf/chtf.sh"
 fi
 
 # source chruby
-if [[ -f "/opt/boxen/homebrew/opt/chruby/share/chruby/chruby.sh" ]]; then
-  source /opt/boxen/homebrew/opt/chruby/share/chruby/chruby.sh
+if [[ -f "/usr/local/opt/chruby/share/chruby/chruby.sh" ]]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
 fi
 
 [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
