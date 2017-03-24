@@ -7,7 +7,6 @@ set noswapfile
 set modeline
 set number
 set laststatus=2
-set nofoldenable " do not fold
 syntax on
 let g:solarized_termcolors=256
 let g:airline_theme='solarized'
@@ -26,6 +25,9 @@ let g:go_list_type = "quickfix"
 
 nnoremap <C-J> :bnext<CR>
 nnoremap <C-K> :bprevious<CR>
+
+let g:riv_disable_folding = 1
+autocmd filetype rst setlocal spell
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 let mapleader=","
