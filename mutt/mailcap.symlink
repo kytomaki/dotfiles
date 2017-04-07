@@ -1,9 +1,5 @@
 # Images
-image/png; imgcat %s && ls %s && read -p "press any key..." && clear
-image/jpeg; imgcat %s && ls %s && read -p "press any key..." && clear
-image/pjpeg; imgcat %s && ls %s && read -p "press any key..." && clear
-image/gif; imgcat %s && ls %s && read -p "press any key..." && clear
-image/tiff; imgcat %s && ls %s && read -p "press any key..." && clear
+image/*; imgcat %s ; needsterminal ;
 
 # PDF
 application/pdf; $HOME/.mutt/view_attachment %s pdf
