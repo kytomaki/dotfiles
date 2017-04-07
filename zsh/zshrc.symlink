@@ -25,8 +25,8 @@ if [[ -f "/usr/local/opt/chruby/share/chruby/chruby.sh" ]]; then
 fi
 
 # instatiate gpg-agent
-if which gpg-agent > /dev/null; then
-  eval $( gpg-agent --daemon )
+if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
+  gpg-connect-agent /bye >/dev/null 2>&1
 fi
 
 # Aws mfa shell environment
