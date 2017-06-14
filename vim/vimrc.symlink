@@ -23,8 +23,8 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
-nnoremap <C-J> :bnext<CR>
-nnoremap <C-K> :bprevious<CR>
+nnoremap <C-K> :bnext<CR>
+nnoremap <C-J> :bprevious<CR>
 
 let g:riv_disable_folding = 1
 autocmd filetype rst setlocal spell
