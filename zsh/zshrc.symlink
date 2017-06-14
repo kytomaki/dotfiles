@@ -29,6 +29,11 @@ if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
   gpg-connect-agent /bye >/dev/null 2>&1
 fi
 
+# Source aws command-completion
+if [[ -f "/usr/local/bin/aws_zsh_completer.sh" ]]; then
+	source /usr/local/bin/aws_zsh_completer.sh
+fi
+
 # Aws mfa shell environment
 if [[ -f "$HOME/src/own/aws/mfa" ]]; then
   function mfa() { eval "$($HOME/src/own/aws/mfa $1)" }
