@@ -1,5 +1,5 @@
 # Images
-image/*; imgcat %s ; needsterminal ;
+image/*; imgcat %s && read && clear ; needsterminal ;
 
 # PDF
 application/pdf; $HOME/.mutt/view_attachment %s pdf
