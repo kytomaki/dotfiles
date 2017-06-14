@@ -23,6 +23,9 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 nnoremap <C-K> :bnext<CR>
 nnoremap <C-J> :bprevious<CR>
 
