@@ -49,5 +49,10 @@ if type direnv > /dev/null ; then
   eval "$(direnv hook zsh)"
 fi
 
+# alias for hub
+if type hub > /dev/null ; then
+  eval "$(hub alias -s)"
+fi
+
 # Run ztodo on entering directory
 chpwd() { ztodo }
