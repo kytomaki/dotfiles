@@ -39,6 +39,11 @@ if [[ -f "$HOME/src/own/aws/mfa" ]]; then
   function mfa() { eval "$($HOME/src/own/aws/mfa $1)" }
 fi
 
+# atlas-token environment
+if [[ -f "$HOME/src/own/atlas-token/atlas-token" ]]; then
+  function atlas-token() { eval "$($HOME/src/own/atlas-token/atlas-token)" }
+fi
+
 # direnv hook
 if type direnv > /dev/null ; then
   eval "$(direnv hook zsh)"
