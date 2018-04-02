@@ -54,5 +54,10 @@ if type hub > /dev/null ; then
   eval "$(hub alias -s)"
 fi
 
+# Alias for gopass
+if type gopass > /dev/null ; then
+	alias pass=gopass
+fi
+
 # Run ztodo on entering directory
 chpwd() { ztodo }
