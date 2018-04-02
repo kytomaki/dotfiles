@@ -19,8 +19,8 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd FileType ruby,puppet,yaml,javascript,jade,json,docker-compose setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_mode_map = { 'mode': 'active' }
 let g:go_list_type = "quickfix"
 
 let g:terraform_align=1
