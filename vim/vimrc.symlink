@@ -1,4 +1,8 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+packloadall
+silent! helptags ALL
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
 set hidden
 set history
 set title
