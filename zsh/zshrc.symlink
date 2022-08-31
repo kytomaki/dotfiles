@@ -4,7 +4,7 @@ export LC_ALL="en_US.UTF-8"
 
 export GOPATH=$HOME/src/go-external:$HOME/src/go
 
-export PATH="/usr/local/opt/gpg-agent/bin:$HOME/src/go/bin:$HOME/src/go-external/bin:$HOME/bin:$HOME/local/bin:$HOME/.local/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/sphinx-doc/bin:/usr/local/opt/gpg-agent/bin:$HOME/src/go/bin:$HOME/src/go-external/bin:$HOME/bin:$HOME/local/bin:$HOME/.local/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 # Local configs
 if [[ -s "${HOME}/.local/zshrc" ]]; then
