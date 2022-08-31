@@ -25,9 +25,6 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.sls set filetype=yaml.jinja
 autocmd FileType ruby,puppet,yaml,javascript,jade,json,docker-compose setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_mode_map = { 'mode': 'active' }
 let g:go_list_type = "quickfix"
 
 let g:terraform_align=1
@@ -40,6 +37,8 @@ let g:riv_disable_folding = 1
 autocmd filetype rst setlocal spell
 
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+let g:ale_linters = {'go': ['gometalinter']}
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 let mapleader=","
