@@ -66,6 +66,11 @@ if type jira > /dev/null ; then
   eval "$(jira --completion-script-zsh)"
 fi
 
+# Iterm
+if [[ -f "$HOME/.iterm2_shell_integration.zsh" ]]; then
+  source "$HOME/.iterm2_shell_integration.zsh"
+fi
+
 # Run ztodo on entering directory
 chpwd() { ztodo }
 
